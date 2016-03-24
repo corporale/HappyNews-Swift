@@ -1,0 +1,504 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3F729BDB1CA4141700DC8527 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F729BDA1CA4141700DC8527 /* AppDelegate.swift */; };
+		3F729BDD1CA4141700DC8527 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F729BDC1CA4141700DC8527 /* ViewController.swift */; };
+		3F729BE01CA4141700DC8527 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F729BDE1CA4141700DC8527 /* Main.storyboard */; };
+		3F729BE21CA4141700DC8527 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F729BE11CA4141700DC8527 /* Assets.xcassets */; };
+		3F729BE51CA4141700DC8527 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F729BE31CA4141700DC8527 /* LaunchScreen.storyboard */; };
+		3F729BF01CA4141700DC8527 /* HappyNewsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F729BEF1CA4141700DC8527 /* HappyNewsTests.swift */; };
+		3F729BFB1CA4141700DC8527 /* HappyNewsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F729BFA1CA4141700DC8527 /* HappyNewsUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3F729BEC1CA4141700DC8527 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3F729BCF1CA4141600DC8527 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3F729BD61CA4141700DC8527;
+			remoteInfo = HappyNews;
+		};
+		3F729BF71CA4141700DC8527 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3F729BCF1CA4141600DC8527 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3F729BD61CA4141700DC8527;
+			remoteInfo = HappyNews;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3F729BD71CA4141700DC8527 /* HappyNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HappyNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F729BDA1CA4141700DC8527 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3F729BDC1CA4141700DC8527 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3F729BDF1CA4141700DC8527 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3F729BE11CA4141700DC8527 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3F729BE41CA4141700DC8527 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3F729BE61CA4141700DC8527 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F729BEB1CA4141700DC8527 /* HappyNewsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HappyNewsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F729BEF1CA4141700DC8527 /* HappyNewsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HappyNewsTests.swift; sourceTree = "<group>"; };
+		3F729BF11CA4141700DC8527 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F729BF61CA4141700DC8527 /* HappyNewsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HappyNewsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F729BFA1CA4141700DC8527 /* HappyNewsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HappyNewsUITests.swift; sourceTree = "<group>"; };
+		3F729BFC1CA4141700DC8527 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3F729BD41CA4141700DC8527 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F729BE81CA4141700DC8527 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F729BF31CA4141700DC8527 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3F729BCE1CA4141600DC8527 = {
+			isa = PBXGroup;
+			children = (
+				3F729BD91CA4141700DC8527 /* HappyNews */,
+				3F729BEE1CA4141700DC8527 /* HappyNewsTests */,
+				3F729BF91CA4141700DC8527 /* HappyNewsUITests */,
+				3F729BD81CA4141700DC8527 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3F729BD81CA4141700DC8527 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3F729BD71CA4141700DC8527 /* HappyNews.app */,
+				3F729BEB1CA4141700DC8527 /* HappyNewsTests.xctest */,
+				3F729BF61CA4141700DC8527 /* HappyNewsUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3F729BD91CA4141700DC8527 /* HappyNews */ = {
+			isa = PBXGroup;
+			children = (
+				3F729BDA1CA4141700DC8527 /* AppDelegate.swift */,
+				3F729BDC1CA4141700DC8527 /* ViewController.swift */,
+				3F729BDE1CA4141700DC8527 /* Main.storyboard */,
+				3F729BE11CA4141700DC8527 /* Assets.xcassets */,
+				3F729BE31CA4141700DC8527 /* LaunchScreen.storyboard */,
+				3F729BE61CA4141700DC8527 /* Info.plist */,
+			);
+			path = HappyNews;
+			sourceTree = "<group>";
+		};
+		3F729BEE1CA4141700DC8527 /* HappyNewsTests */ = {
+			isa = PBXGroup;
+			children = (
+				3F729BEF1CA4141700DC8527 /* HappyNewsTests.swift */,
+				3F729BF11CA4141700DC8527 /* Info.plist */,
+			);
+			path = HappyNewsTests;
+			sourceTree = "<group>";
+		};
+		3F729BF91CA4141700DC8527 /* HappyNewsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3F729BFA1CA4141700DC8527 /* HappyNewsUITests.swift */,
+				3F729BFC1CA4141700DC8527 /* Info.plist */,
+			);
+			path = HappyNewsUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3F729BD61CA4141700DC8527 /* HappyNews */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3F729BFF1CA4141700DC8527 /* Build configuration list for PBXNativeTarget "HappyNews" */;
+			buildPhases = (
+				3F729BD31CA4141700DC8527 /* Sources */,
+				3F729BD41CA4141700DC8527 /* Frameworks */,
+				3F729BD51CA4141700DC8527 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HappyNews;
+			productName = HappyNews;
+			productReference = 3F729BD71CA4141700DC8527 /* HappyNews.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3F729BEA1CA4141700DC8527 /* HappyNewsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3F729C021CA4141700DC8527 /* Build configuration list for PBXNativeTarget "HappyNewsTests" */;
+			buildPhases = (
+				3F729BE71CA4141700DC8527 /* Sources */,
+				3F729BE81CA4141700DC8527 /* Frameworks */,
+				3F729BE91CA4141700DC8527 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3F729BED1CA4141700DC8527 /* PBXTargetDependency */,
+			);
+			name = HappyNewsTests;
+			productName = HappyNewsTests;
+			productReference = 3F729BEB1CA4141700DC8527 /* HappyNewsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3F729BF51CA4141700DC8527 /* HappyNewsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3F729C051CA4141700DC8527 /* Build configuration list for PBXNativeTarget "HappyNewsUITests" */;
+			buildPhases = (
+				3F729BF21CA4141700DC8527 /* Sources */,
+				3F729BF31CA4141700DC8527 /* Frameworks */,
+				3F729BF41CA4141700DC8527 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3F729BF81CA4141700DC8527 /* PBXTargetDependency */,
+			);
+			name = HappyNewsUITests;
+			productName = HappyNewsUITests;
+			productReference = 3F729BF61CA4141700DC8527 /* HappyNewsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3F729BCF1CA4141600DC8527 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = corporal;
+				TargetAttributes = {
+					3F729BD61CA4141700DC8527 = {
+						CreatedOnToolsVersion = 7.0.1;
+					};
+					3F729BEA1CA4141700DC8527 = {
+						CreatedOnToolsVersion = 7.0.1;
+						TestTargetID = 3F729BD61CA4141700DC8527;
+					};
+					3F729BF51CA4141700DC8527 = {
+						CreatedOnToolsVersion = 7.0.1;
+						TestTargetID = 3F729BD61CA4141700DC8527;
+					};
+				};
+			};
+			buildConfigurationList = 3F729BD21CA4141600DC8527 /* Build configuration list for PBXProject "HappyNews" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3F729BCE1CA4141600DC8527;
+			productRefGroup = 3F729BD81CA4141700DC8527 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3F729BD61CA4141700DC8527 /* HappyNews */,
+				3F729BEA1CA4141700DC8527 /* HappyNewsTests */,
+				3F729BF51CA4141700DC8527 /* HappyNewsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3F729BD51CA4141700DC8527 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F729BE51CA4141700DC8527 /* LaunchScreen.storyboard in Resources */,
+				3F729BE21CA4141700DC8527 /* Assets.xcassets in Resources */,
+				3F729BE01CA4141700DC8527 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F729BE91CA4141700DC8527 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F729BF41CA4141700DC8527 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3F729BD31CA4141700DC8527 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F729BDD1CA4141700DC8527 /* ViewController.swift in Sources */,
+				3F729BDB1CA4141700DC8527 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F729BE71CA4141700DC8527 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F729BF01CA4141700DC8527 /* HappyNewsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F729BF21CA4141700DC8527 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F729BFB1CA4141700DC8527 /* HappyNewsUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3F729BED1CA4141700DC8527 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3F729BD61CA4141700DC8527 /* HappyNews */;
+			targetProxy = 3F729BEC1CA4141700DC8527 /* PBXContainerItemProxy */;
+		};
+		3F729BF81CA4141700DC8527 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3F729BD61CA4141700DC8527 /* HappyNews */;
+			targetProxy = 3F729BF71CA4141700DC8527 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3F729BDE1CA4141700DC8527 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3F729BDF1CA4141700DC8527 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3F729BE31CA4141700DC8527 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3F729BE41CA4141700DC8527 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3F729BFD1CA4141700DC8527 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3F729BFE1CA4141700DC8527 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3F729C001CA4141700DC8527 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = HappyNews/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.crazy.HappyNews;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		3F729C011CA4141700DC8527 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = HappyNews/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.crazy.HappyNews;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		3F729C031CA4141700DC8527 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = HappyNewsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.crazy.HappyNewsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HappyNews.app/HappyNews";
+			};
+			name = Debug;
+		};
+		3F729C041CA4141700DC8527 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = HappyNewsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.crazy.HappyNewsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HappyNews.app/HappyNews";
+			};
+			name = Release;
+		};
+		3F729C061CA4141700DC8527 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = HappyNewsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.crazy.HappyNewsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = HappyNews;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		3F729C071CA4141700DC8527 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = HappyNewsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.crazy.HappyNewsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = HappyNews;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3F729BD21CA4141600DC8527 /* Build configuration list for PBXProject "HappyNews" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F729BFD1CA4141700DC8527 /* Debug */,
+				3F729BFE1CA4141700DC8527 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3F729BFF1CA4141700DC8527 /* Build configuration list for PBXNativeTarget "HappyNews" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F729C001CA4141700DC8527 /* Debug */,
+				3F729C011CA4141700DC8527 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		3F729C021CA4141700DC8527 /* Build configuration list for PBXNativeTarget "HappyNewsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F729C031CA4141700DC8527 /* Debug */,
+				3F729C041CA4141700DC8527 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		3F729C051CA4141700DC8527 /* Build configuration list for PBXNativeTarget "HappyNewsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F729C061CA4141700DC8527 /* Debug */,
+				3F729C071CA4141700DC8527 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3F729BCF1CA4141600DC8527 /* Project object */;
+}
