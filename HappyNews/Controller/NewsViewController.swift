@@ -13,6 +13,12 @@ import UIKit
 class NewsViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
     var collectionView:UICollectionView!
+    var httpManager:AFHTTPSessionManager!
+    var newsArr:Array<Dictionary<String, AnyObject>>!
+//    var newsArr:Array<AnyObject>!
+    
+    
+    var newsconsistArr:Array<AnyObject>!
     
     
     override func viewDidLoad() {
@@ -23,7 +29,18 @@ class NewsViewController: UIViewController, UICollectionViewDelegate, UICollecti
         self.navigationItem.title = "头条"
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(image:UIImage(named: "done"), style: UIBarButtonItemStyle.Plain, target: self, action: "doneSlider")
         
+        self.navigationController?.navigationBar.translucent = true
+        
+        loadData()
+        
+        
         setupCollectionView()
+        
+       
+        
+        
+        // 防止出现提示
+        self.automaticallyAdjustsScrollViewInsets = false;
     }
     
     
@@ -51,8 +68,12 @@ class NewsViewController: UIViewController, UICollectionViewDelegate, UICollecti
     }
 
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
-        return 5
+        if self.newsconsistArr == nil {
+            return 5
+        }
+        else{
+            return self.newsconsistArr.count
+        }
     }
     
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
@@ -60,8 +81,19 @@ class NewsViewController: UIViewController, UICollectionViewDelegate, UICollecti
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("reuseful", forIndexPath: indexPath)
+        let cell:NewsCollectionViewCell = collectionView.dequeueReusableCellWithReuseIdentifier("reuseful", forIndexPath: indexPath) as! NewsCollectionViewCell
+//        self.newsconsistArr as NSArray
+        
+        if self.newsconsistArr != nil {
+        
+        cell.number = self.newsconsistArr[indexPath.row] as! Array<AnyObject>
+        print("_____shuju\(cell.newsArr)")
+            
+        
+        }
         return cell
+        
+        
     }
     
     
@@ -69,13 +101,45 @@ class NewsViewController: UIViewController, UICollectionViewDelegate, UICollecti
     func loadData(){
         
        
-       
+       self.httpManager = AFHTTPSessionManager()
         
+       // 注意有两个info.plist文件, 不要加错
+       self.httpManager.GET(newsUrl, parameters: nil, progress: nil, success: { (Task, responseObject) -> Void in
         
+//        print("__数据是\(responseObject)")
         
+        let dic:AnyObject! = responseObject
+        let dic1:AnyObject! = dic.objectForKey("data")
+        let dic2:AnyObject! = dic1["articles"]
+        self.newsArr = dic2! as! Array<Dictionary<String, AnyObject>>
         
+//        print(self.newsArr)
+        
+        let count = self.newsArr.count
+        var page = Array<AnyObject>()
+        var pages = Array<AnyObject>()
+
+        for var i = 0; i < count; i++ {
+            let newsmodel = NewsModel()
+            newsmodel.setValuesForKeysWithDictionary(self.newsArr[i] )
+            page.append(newsmodel)
+            while page.count == 6 {
+                pages.append(page)
+                page = Array<AnyObject>()
+                
+            }
+            
+        }
+        self.newsconsistArr = pages
+        
+        self.collectionView.reloadData()
+        
+
+        
+        }) { (NSURLSessionDataTask, NSError) -> Void in
+            print("___\(NSError)")
+        }
     }
-    
     
     func doneSlider(){
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
