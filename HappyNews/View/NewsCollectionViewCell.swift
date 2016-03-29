@@ -30,8 +30,9 @@ class NewsCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var imageview: UIImageView!
     
     var titleArray:Array<UILabel>!
-    var contentViewArray:Array<UIView>!
+    var contentViewArray:NSArray!
     var newsArr:Array<AnyObject>!
+    var toucher:UITouch!
     
 //    init(newsarray:Array<AnyObject>){
 //        
@@ -46,25 +47,30 @@ class NewsCollectionViewCell: UICollectionViewCell {
     var number:Array<AnyObject> {
 //        unowned let unself:NewsCollectionViewCell = self
         get{
-            return newsArr
+            return self.newsArr
         }
         
         set{
             
-           newsArr = newValue
+            self.newsArr = newValue
             
-//            for var i = 0; i < newValue.count; i++ {
-//                for var j = 0; j < newValue.count - i - 1; j++ {
-//                    let news:NewsModel = newValue[j] as! NewsModel
-//                    if (news.thumbnail_mpic != nil) {
-//                        var newsmodeler = NewsModel()
-//                        
-//                        newsmodeler = newValue[j] as! NewsModel
-//                        newValue[j] = newValue[j + 1]
-//                        newValue[j + 1] = newsmodeler
-//                    }
-//                }
-//            }
+//            print("没有排序前的格式\(newsArr)")
+            
+            for var i = 0; i < self.newsArr.count; i++ {
+                for var j = 0; j < self.newsArr.count - i - 1; j++ {
+                    let news:NewsModel = newValue[j] as! NewsModel
+                    if (news.thumbnail_mpic == nil) {
+                        var newsmodeler = NewsModel()
+                        
+                        newsmodeler = newValue[j] as! NewsModel
+                        self.newsArr[j] = newValue[j + 1]
+                        self.newsArr[j + 1] = newsmodeler
+                    }
+                }
+            }
+            
+//            print("排序后的的格式格式\(newsArr)")
+            
             self.contentViewArray = [self.contentView1, self.contentView2, self.contentView3, self.contentView4, self.contentView5, self.contentView6]
             self.titleArray = [self.titleLB1, self.titleLB2, self.titleLB3, self.titleLB4, self.titleLB5, self.titleLB6]
             
@@ -74,8 +80,8 @@ class NewsCollectionViewCell: UICollectionViewCell {
             var news = NewsModel()
             
             for var i = 0; i < count; i++ {
-                news = newValue[i] as! NewsModel
-                view = contentViewArray![i]
+                news = newsArr[i] as! NewsModel
+                view = contentViewArray[i] as! UIView
                 view.layer.borderWidth = 0.25
                 view.layer.borderColor = UIColor.lightGrayColor().CGColor
                 if (news.title != nil) {
@@ -100,21 +106,53 @@ class NewsCollectionViewCell: UICollectionViewCell {
     }
     
     
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        
+        for touch: AnyObject in touches {
+            
+        
+            toucher = touch as! UITouch
+        
+            self.contentViewArray.enumerateObjectsUsingBlock({ (view, idx, stop) -> Void in
+                
+                let point = self.toucher.locationInView(view as? UIView)
+                
+                if view.pointInside(point, withEvent: event) {
+                    
+                    print("____下标为\(idx)")
+                    
+                    let model = self.newsArr[idx] as! NewsModel
+                    
+                    let vc = NewsDetailViewController()
+                    vc.model = model
+                    view.navController!().pushViewController(vc, animated: true)
+                    
+                }
+            })
+            
+        
+        
+        }
+        
+    }
     
     
-    
+
      override func layoutSubviews() {
         
         super.layoutSubviews()
         
-        if self.contentViewArray == nil{
-        self.contentViewArray = [self.contentView1, self.contentView2, self.contentView3, self.contentView4, self.contentView5, self.contentView6]
-        }
+//        if self.contentViewArray == nil{
+//        self.contentViewArray = [self.contentView1, self.contentView2, self.contentView3, self.contentView4, self.contentView5, self.contentView6]
+//        }
+//        
+//        
+//        if self.titleArray == nil{
+//        self.titleArray = [self.titleLB1, self.titleLB2, self.titleLB3, self.titleLB4, self.titleLB5, self.titleLB6]
+//        }
+        self.titleLB1.textColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.6)
         
         
-        if self.titleArray == nil{
-        self.titleArray = [self.titleLB1, self.titleLB2, self.titleLB3, self.titleLB4, self.titleLB5, self.titleLB6]
-        }
     }
     
     

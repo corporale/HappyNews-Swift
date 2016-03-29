@@ -22,6 +22,8 @@
 		3F729BE51CA4141700DC8527 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F729BE31CA4141700DC8527 /* LaunchScreen.storyboard */; };
 		3F729BF01CA4141700DC8527 /* HappyNewsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F729BEF1CA4141700DC8527 /* HappyNewsTests.swift */; };
 		3F729BFB1CA4141700DC8527 /* HappyNewsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F729BFA1CA4141700DC8527 /* HappyNewsUITests.swift */; };
+		3F846ECC1CAA1C47006A647E /* NewsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F846ECB1CAA1C47006A647E /* NewsDetailViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		3F846ECF1CAA31F1006A647E /* UIView+Init.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F846ECE1CAA31F1006A647E /* UIView+Init.m */; settings = {ASSET_TAGS = (); }; };
 		3FA525781CA8E5C6009F84E2 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA525641CA8E5C6009F84E2 /* AFHTTPSessionManager.m */; settings = {ASSET_TAGS = (); }; };
 		3FA525791CA8E5C6009F84E2 /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA525671CA8E5C6009F84E2 /* AFNetworkReachabilityManager.m */; settings = {ASSET_TAGS = (); }; };
 		3FA5257A1CA8E5C7009F84E2 /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA525691CA8E5C6009F84E2 /* AFSecurityPolicy.m */; settings = {ASSET_TAGS = (); }; };
@@ -88,6 +90,9 @@
 		3F729BF61CA4141700DC8527 /* HappyNewsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HappyNewsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F729BFA1CA4141700DC8527 /* HappyNewsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HappyNewsUITests.swift; sourceTree = "<group>"; };
 		3F729BFC1CA4141700DC8527 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F846ECB1CAA1C47006A647E /* NewsDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsDetailViewController.swift; sourceTree = "<group>"; };
+		3F846ECD1CAA31F1006A647E /* UIView+Init.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Init.h"; sourceTree = "<group>"; };
+		3F846ECE1CAA31F1006A647E /* UIView+Init.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Init.m"; sourceTree = "<group>"; };
 		3FA525631CA8E5C6009F84E2 /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
 		3FA525641CA8E5C6009F84E2 /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPSessionManager.m; sourceTree = "<group>"; };
 		3FA525651CA8E5C6009F84E2 /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
@@ -185,6 +190,7 @@
 				3F6F6A4A1CA52421004F8624 /* VideoViewController.swift */,
 				3F6F6A4C1CA524F9004F8624 /* HappyPlayingViewController.swift */,
 				3F6F6A611CA53EE2004F8624 /* LeftViewController.swift */,
+				3F846ECB1CAA1C47006A647E /* NewsDetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -211,6 +217,8 @@
 				3F6F6A601CA53913004F8624 /* MMDrawerController-Bridge-Header.h */,
 				3F6F6A631CA54015004F8624 /* Common.swift */,
 				3F6F6A6F1CA56D70004F8624 /* MacroDefine.swift */,
+				3F846ECD1CAA31F1006A647E /* UIView+Init.h */,
+				3F846ECE1CAA31F1006A647E /* UIView+Init.m */,
 				3FC849BE1CA934B70058D528 /* SDWebImage */,
 				3FA525621CA8E5C6009F84E2 /* AFNetworking */,
 			);
@@ -546,6 +554,7 @@
 				3FC849E51CA934B70058D528 /* UIImage+GIF.m in Sources */,
 				3FC849E41CA934B70058D528 /* UIButton+WebCache.m in Sources */,
 				3F6F6A491CA52336004F8624 /* NewsViewController.swift in Sources */,
+				3F846ECF1CAA31F1006A647E /* UIView+Init.m in Sources */,
 				3FC849E31CA934B70058D528 /* SDWebImagePrefetcher.m in Sources */,
 				3FC849E81CA934B70058D528 /* UIImageView+WebCache.m in Sources */,
 				3FC849E71CA934B70058D528 /* UIImageView+HighlightedWebCache.m in Sources */,
@@ -553,6 +562,7 @@
 				3FC849DD1CA934B70058D528 /* SDImageCache.m in Sources */,
 				3FC849DE1CA934B70058D528 /* SDWebImageCompat.m in Sources */,
 				3F6F6A621CA53EE2004F8624 /* LeftViewController.swift in Sources */,
+				3F846ECC1CAA1C47006A647E /* NewsDetailViewController.swift in Sources */,
 				3F6F6A641CA54015004F8624 /* Common.swift in Sources */,
 				3FC849E11CA934B70058D528 /* SDWebImageDownloaderOperation.m in Sources */,
 				3FA5257A1CA8E5C7009F84E2 /* AFSecurityPolicy.m in Sources */,
@@ -691,6 +701,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = HappyNews/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -708,6 +719,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = HappyNews/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",

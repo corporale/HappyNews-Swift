@@ -82,12 +82,11 @@ class NewsViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell:NewsCollectionViewCell = collectionView.dequeueReusableCellWithReuseIdentifier("reuseful", forIndexPath: indexPath) as! NewsCollectionViewCell
-//        self.newsconsistArr as NSArray
         
         if self.newsconsistArr != nil {
         
         cell.number = self.newsconsistArr[indexPath.row] as! Array<AnyObject>
-        print("_____shuju\(cell.newsArr)")
+//        print("_____shuju\(cell.newsArr)")
             
         
         }
