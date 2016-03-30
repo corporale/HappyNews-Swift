@@ -45,6 +45,14 @@
 		3FC849E71CA934B70058D528 /* UIImageView+HighlightedWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC849D71CA934B70058D528 /* UIImageView+HighlightedWebCache.m */; settings = {ASSET_TAGS = (); }; };
 		3FC849E81CA934B70058D528 /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC849D91CA934B70058D528 /* UIImageView+WebCache.m */; settings = {ASSET_TAGS = (); }; };
 		3FC849E91CA934B70058D528 /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC849DB1CA934B70058D528 /* UIView+WebCacheOperation.m */; settings = {ASSET_TAGS = (); }; };
+		3FE4AA151CAB7DC8005F94AB /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE4AA141CAB7DC8005F94AB /* MenuViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		3FE4AA221CAB98F6005F94AB /* SKScNavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE4AA1A1CAB98F6005F94AB /* SKScNavViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		3FE4AA231CAB98F6005F94AB /* arrow@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FE4AA1C1CAB98F6005F94AB /* arrow@3x.png */; settings = {ASSET_TAGS = (); }; };
+		3FE4AA241CAB98F6005F94AB /* SKMacros.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE4AA1D1CAB98F6005F94AB /* SKMacros.swift */; settings = {ASSET_TAGS = (); }; };
+		3FE4AA251CAB98F6005F94AB /* SKLaunchMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE4AA1F1CAB98F6005F94AB /* SKLaunchMenu.swift */; settings = {ASSET_TAGS = (); }; };
+		3FE4AA261CAB98F6005F94AB /* SKLaunchMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE4AA201CAB98F6005F94AB /* SKLaunchMenuItem.swift */; settings = {ASSET_TAGS = (); }; };
+		3FE4AA271CAB98F6005F94AB /* SKScNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE4AA211CAB98F6005F94AB /* SKScNavBar.swift */; settings = {ASSET_TAGS = (); }; };
+		3FE4AA291CAB9CCD005F94AB /* PictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE4AA281CAB9CCD005F94AB /* PictureViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		ABC1E0F0F2D57F9A57E34231 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F59496E96A31884F0364D535 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -136,6 +144,14 @@
 		3FC849D91CA934B70058D528 /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
 		3FC849DA1CA934B70058D528 /* UIView+WebCacheOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WebCacheOperation.h"; sourceTree = "<group>"; };
 		3FC849DB1CA934B70058D528 /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
+		3FE4AA141CAB7DC8005F94AB /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		3FE4AA1A1CAB98F6005F94AB /* SKScNavViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKScNavViewController.swift; sourceTree = "<group>"; };
+		3FE4AA1C1CAB98F6005F94AB /* arrow@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow@3x.png"; sourceTree = "<group>"; };
+		3FE4AA1D1CAB98F6005F94AB /* SKMacros.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKMacros.swift; sourceTree = "<group>"; };
+		3FE4AA1F1CAB98F6005F94AB /* SKLaunchMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKLaunchMenu.swift; sourceTree = "<group>"; };
+		3FE4AA201CAB98F6005F94AB /* SKLaunchMenuItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKLaunchMenuItem.swift; sourceTree = "<group>"; };
+		3FE4AA211CAB98F6005F94AB /* SKScNavBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKScNavBar.swift; sourceTree = "<group>"; };
+		3FE4AA281CAB9CCD005F94AB /* PictureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PictureViewController.swift; sourceTree = "<group>"; };
 		F59496E96A31884F0364D535 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -187,7 +203,9 @@
 			isa = PBXGroup;
 			children = (
 				3F6F6A481CA52336004F8624 /* NewsViewController.swift */,
+				3FE4AA141CAB7DC8005F94AB /* MenuViewController.swift */,
 				3F6F6A4A1CA52421004F8624 /* VideoViewController.swift */,
+				3FE4AA281CAB9CCD005F94AB /* PictureViewController.swift */,
 				3F6F6A4C1CA524F9004F8624 /* HappyPlayingViewController.swift */,
 				3F6F6A611CA53EE2004F8624 /* LeftViewController.swift */,
 				3F846ECB1CAA1C47006A647E /* NewsDetailViewController.swift */,
@@ -219,6 +237,7 @@
 				3F6F6A6F1CA56D70004F8624 /* MacroDefine.swift */,
 				3F846ECD1CAA31F1006A647E /* UIView+Init.h */,
 				3F846ECE1CAA31F1006A647E /* UIView+Init.m */,
+				3FE4AA181CAB98F6005F94AB /* SKScNavBarController */,
 				3FC849BE1CA934B70058D528 /* SDWebImage */,
 				3FA525621CA8E5C6009F84E2 /* AFNetworking */,
 			);
@@ -335,6 +354,43 @@
 				3FC849DB1CA934B70058D528 /* UIView+WebCacheOperation.m */,
 			);
 			path = SDWebImage;
+			sourceTree = "<group>";
+		};
+		3FE4AA181CAB98F6005F94AB /* SKScNavBarController */ = {
+			isa = PBXGroup;
+			children = (
+				3FE4AA191CAB98F6005F94AB /* SKController */,
+				3FE4AA1B1CAB98F6005F94AB /* SKMacros */,
+				3FE4AA1E1CAB98F6005F94AB /* SKViews */,
+			);
+			path = SKScNavBarController;
+			sourceTree = "<group>";
+		};
+		3FE4AA191CAB98F6005F94AB /* SKController */ = {
+			isa = PBXGroup;
+			children = (
+				3FE4AA1A1CAB98F6005F94AB /* SKScNavViewController.swift */,
+			);
+			path = SKController;
+			sourceTree = "<group>";
+		};
+		3FE4AA1B1CAB98F6005F94AB /* SKMacros */ = {
+			isa = PBXGroup;
+			children = (
+				3FE4AA1C1CAB98F6005F94AB /* arrow@3x.png */,
+				3FE4AA1D1CAB98F6005F94AB /* SKMacros.swift */,
+			);
+			path = SKMacros;
+			sourceTree = "<group>";
+		};
+		3FE4AA1E1CAB98F6005F94AB /* SKViews */ = {
+			isa = PBXGroup;
+			children = (
+				3FE4AA1F1CAB98F6005F94AB /* SKLaunchMenu.swift */,
+				3FE4AA201CAB98F6005F94AB /* SKLaunchMenuItem.swift */,
+				3FE4AA211CAB98F6005F94AB /* SKScNavBar.swift */,
+			);
+			path = SKViews;
 			sourceTree = "<group>";
 		};
 		C9C64B9E20A7C88A4B79484E /* Frameworks */ = {
@@ -462,6 +518,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F6F6A661CA55F65004F8624 /* nav_menu_icon@2x.png in Resources */,
+				3FE4AA231CAB98F6005F94AB /* arrow@3x.png in Resources */,
 				3F729BE51CA4141700DC8527 /* LaunchScreen.storyboard in Resources */,
 				3F729BE21CA4141700DC8527 /* Assets.xcassets in Resources */,
 				3F6F6A741CA56DB7004F8624 /* NewsCollectionViewCell.xib in Resources */,
@@ -539,15 +596,19 @@
 			files = (
 				3FC849E61CA934B70058D528 /* UIImage+MultiFormat.m in Sources */,
 				3F6F6A4D1CA524F9004F8624 /* HappyPlayingViewController.swift in Sources */,
+				3FE4AA221CAB98F6005F94AB /* SKScNavViewController.swift in Sources */,
 				3FC849E21CA934B70058D528 /* SDWebImageManager.m in Sources */,
 				3F6F6A701CA56D70004F8624 /* MacroDefine.swift in Sources */,
+				3FE4AA271CAB98F6005F94AB /* SKScNavBar.swift in Sources */,
 				3FA525791CA8E5C6009F84E2 /* AFNetworkReachabilityManager.m in Sources */,
 				3FA5257D1CA8E5C7009F84E2 /* AFURLSessionManager.m in Sources */,
 				3FC849E01CA934B70058D528 /* SDWebImageDownloader.m in Sources */,
+				3FE4AA291CAB9CCD005F94AB /* PictureViewController.swift in Sources */,
 				3FA5257B1CA8E5C7009F84E2 /* AFURLRequestSerialization.m in Sources */,
 				3F729BDB1CA4141700DC8527 /* AppDelegate.swift in Sources */,
 				3FA5257C1CA8E5C7009F84E2 /* AFURLResponseSerialization.m in Sources */,
 				3FA525781CA8E5C6009F84E2 /* AFHTTPSessionManager.m in Sources */,
+				3FE4AA251CAB98F6005F94AB /* SKLaunchMenu.swift in Sources */,
 				3F6F6A731CA56DB7004F8624 /* NewsCollectionViewCell.swift in Sources */,
 				3FB901451CA917C400485679 /* NewsModel.swift in Sources */,
 				3FC849DC1CA934B70058D528 /* NSData+ImageContentType.m in Sources */,
@@ -557,7 +618,9 @@
 				3F846ECF1CAA31F1006A647E /* UIView+Init.m in Sources */,
 				3FC849E31CA934B70058D528 /* SDWebImagePrefetcher.m in Sources */,
 				3FC849E81CA934B70058D528 /* UIImageView+WebCache.m in Sources */,
+				3FE4AA261CAB98F6005F94AB /* SKLaunchMenuItem.swift in Sources */,
 				3FC849E71CA934B70058D528 /* UIImageView+HighlightedWebCache.m in Sources */,
+				3FE4AA241CAB98F6005F94AB /* SKMacros.swift in Sources */,
 				3FC849DF1CA934B70058D528 /* SDWebImageDecoder.m in Sources */,
 				3FC849DD1CA934B70058D528 /* SDImageCache.m in Sources */,
 				3FC849DE1CA934B70058D528 /* SDWebImageCompat.m in Sources */,
@@ -565,6 +628,7 @@
 				3F846ECC1CAA1C47006A647E /* NewsDetailViewController.swift in Sources */,
 				3F6F6A641CA54015004F8624 /* Common.swift in Sources */,
 				3FC849E11CA934B70058D528 /* SDWebImageDownloaderOperation.m in Sources */,
+				3FE4AA151CAB7DC8005F94AB /* MenuViewController.swift in Sources */,
 				3FA5257A1CA8E5C7009F84E2 /* AFSecurityPolicy.m in Sources */,
 				3FC849E91CA934B70058D528 /* UIView+WebCacheOperation.m in Sources */,
 				3F6F6A4B1CA52421004F8624 /* VideoViewController.swift in Sources */,

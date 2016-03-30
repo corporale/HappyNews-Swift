@@ -26,22 +26,28 @@ class NewsViewController: UIViewController, UICollectionViewDelegate, UICollecti
 
         self.view.backgroundColor = UIColor.whiteColor()
         
-        self.navigationItem.title = "头条"
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image:UIImage(named: "done"), style: UIBarButtonItemStyle.Plain, target: self, action: "doneSlider")
-        
-        self.navigationController?.navigationBar.translucent = true
+//        self.navigationItem.title = "头条"
+       
+//        let navigationBar = UIButton(frame: CGRectMake(10, 10, 30, 30))
+//        navigationBar.setBackgroundImage(UIImage(named: "done"), forState: UIControlState.Normal)
+//        self.view.addSubview(navigationBar)
+//        navigationBar.addTarget(self, action: "doneSlider", forControlEvents: UIControlEvents.TouchUpInside)
+//        
+//        self.navigationController?.navigationBarHidden = true
         
         loadData()
         
         
         setupCollectionView()
         
-       
+        
         
         
         // 防止出现提示
         self.automaticallyAdjustsScrollViewInsets = false;
     }
+    
+    
     
     
     func setupCollectionView(){
@@ -52,20 +58,26 @@ class NewsViewController: UIViewController, UICollectionViewDelegate, UICollecti
         flowLayout.minimumInteritemSpacing = 0
         flowLayout.minimumLineSpacing = 0
         flowLayout.sectionInset = UIEdgeInsetsMake(0, 0, 0, 0)
-        flowLayout.scrollDirection = UICollectionViewScrollDirection.Horizontal
+        flowLayout.scrollDirection = UICollectionViewScrollDirection.Vertical
         
-        self.collectionView = UICollectionView(frame: self.view.bounds, collectionViewLayout: flowLayout)
+        self.collectionView = UICollectionView(frame: CGRectMake(0, 0, kscreenWidth, kscreenHeight), collectionViewLayout: flowLayout)
         self.collectionView.backgroundColor = UIColor.whiteColor()
         self.collectionView.dataSource = self
         self.collectionView.delegate = self
         self.collectionView.pagingEnabled = true
         
+        // 测试
+//        self.collectionView.backgroundColor = UIColor.yellowColor() 
         
         self.collectionView.registerNib(UINib(nibName: "NewsCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "reuseful")
         
         self.view.addSubview(self.collectionView)
         
     }
+    
+    
+       
+    
 
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if self.newsconsistArr == nil {
@@ -140,11 +152,7 @@ class NewsViewController: UIViewController, UICollectionViewDelegate, UICollecti
         }
     }
     
-    func doneSlider(){
-        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        appDelegate.drawerController.toggleDrawerSide(MMDrawerSide.Left, animated: true, completion: nil)
     
-    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

@@ -1,30 +1,19 @@
 //
-//  NewsDetailViewController.swift
+//  PictureViewController.swift
 //  HappyNews
 //
-//  Created by lanou on 16/3/29.
+//  Created by lanou on 16/3/30.
 //  Copyright © 2016年 corporal. All rights reserved.
 //
 
 import UIKit
 
-class NewsDetailViewController: UIViewController {
+class PictureViewController: UIViewController {
 
-    var model: NewsModel!
-    var webview: UIWebView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-    self.view.backgroundColor = UIColor.yellowColor()
-        
-    webview = UIWebView(frame: self.view.bounds)
-    
-    let request = NSURLRequest(URL: NSURL(string: self.model.weburl)!)
-        
-    self.view.addSubview(webview)
-    
-    webview.loadRequest(request)
-        
+
+        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {

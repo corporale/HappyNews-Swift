@@ -34,18 +34,10 @@ class NewsCollectionViewCell: UICollectionViewCell {
     var newsArr:Array<AnyObject>!
     var toucher:UITouch!
     
-//    init(newsarray:Array<AnyObject>){
-//        
-//       self.newsArr = newsarray
-//        
-//    }
 
-//    required init?(coder aDecoder: NSCoder) {
-//        fatalError("init(coder:) has not been implemented")
-//    }
     
     var number:Array<AnyObject> {
-//        unowned let unself:NewsCollectionViewCell = self
+
         get{
             return self.newsArr
         }
@@ -141,7 +133,7 @@ class NewsCollectionViewCell: UICollectionViewCell {
      override func layoutSubviews() {
         
         super.layoutSubviews()
-        
+    
 //        if self.contentViewArray == nil{
 //        self.contentViewArray = [self.contentView1, self.contentView2, self.contentView3, self.contentView4, self.contentView5, self.contentView6]
 //        }
@@ -150,6 +142,8 @@ class NewsCollectionViewCell: UICollectionViewCell {
 //        if self.titleArray == nil{
 //        self.titleArray = [self.titleLB1, self.titleLB2, self.titleLB3, self.titleLB4, self.titleLB5, self.titleLB6]
 //        }
+        
+        
         self.titleLB1.textColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.6)
         
         

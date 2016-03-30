@@ -22,9 +22,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: mainFrame)
         
         let leftViewController = LeftViewController()
-        let newsVC = NewsViewController()
+//        let newsVC = NewsViewController()
+        let menuVC = MenuViewController()
         
-        let newsNavigationController = UINavigationController(rootViewController: newsVC)
+        let newsNavigationController = UINavigationController(rootViewController: menuVC)
         
         drawerController = MMDrawerController(centerViewController: newsNavigationController, leftDrawerViewController: leftViewController)
         
