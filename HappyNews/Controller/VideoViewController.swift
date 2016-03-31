@@ -8,6 +8,7 @@
 
 import UIKit
 
+import MediaPlayer
 import Alamofire
 
 class VideoViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
@@ -20,22 +21,29 @@ class VideoViewController: UIViewController, UITableViewDataSource, UITableViewD
     var refreshControl:UIRefreshControl!
     var activiLoading:UIActivityIndicatorView!
     
+    var mediaPlayer: MPMoviePlayerController!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.view.backgroundColor = UIColor.whiteColor()
         self.tableview = UITableView(frame: self.view.bounds, style: UITableViewStyle.Plain)
-        self.tableview.delegate = self
-        self.tableview.dataSource = self
+        
         self.tableview.backgroundColor = UIColor.whiteColor()
         self.view.addSubview(self.tableview)
         
         self.tableview.tableFooterView = UIView()
         self.mediaArray = NSMutableArray()
         
+        activiLoading.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.WhiteLarge
+        refreshControl.addTarget(self, action: "", forControlEvents: UIControlEvents.ValueChanged)
+        refreshControl.attributedTitle = NSAttributedString(string: "松开后自动刷新")
+        
         
         refreshData()
         
+        self.tableview.delegate = self
+        self.tableview.dataSource = self
     
     }
     
@@ -99,14 +107,10 @@ class VideoViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if self.mediaArray != nil {
-            
+        
             return self.mediaArray.count
-        }
-        else{
-            
-            return 0
-        }
+
+    
     }
     
     

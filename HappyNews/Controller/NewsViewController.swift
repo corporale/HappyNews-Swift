@@ -62,8 +62,7 @@ class NewsViewController: UIViewController, UICollectionViewDelegate, UICollecti
         
         self.collectionView = UICollectionView(frame: CGRectMake(0, 0, kscreenWidth, kscreenHeight), collectionViewLayout: flowLayout)
         self.collectionView.backgroundColor = UIColor.whiteColor()
-        self.collectionView.dataSource = self
-        self.collectionView.delegate = self
+        
         self.collectionView.pagingEnabled = true
         
         // 测试
@@ -73,6 +72,8 @@ class NewsViewController: UIViewController, UICollectionViewDelegate, UICollecti
         
         self.view.addSubview(self.collectionView)
         
+        self.collectionView.dataSource = self
+        self.collectionView.delegate = self
     }
     
     
