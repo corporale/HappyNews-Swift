@@ -72,8 +72,10 @@ class LeftViewController: UIViewController, UITableViewDelegate,
         
         switch indexPath.row{
         case 0:
-            let newsVC = NewsViewController()
-            let centerNavigation = UINavigationController(rootViewController: newsVC)
+//            let newsVC = NewsViewController()
+            
+            let menuVC = MenuViewController()
+            let centerNavigation = UINavigationController(rootViewController: menuVC)
             let appDelegate = UIApplication.sharedApplication().delegate as!AppDelegate
             
             appDelegate.drawerController.centerViewController = centerNavigation
