@@ -18,12 +18,22 @@ class MediaModel: NSObject {
     
     var descriptions: String! // 具体描述
     
-    var topicImg: String!     // 图片网址
-    var playCount: Int16!     // 播放次数
+//    var topicImg: String!     // 图片网址
+    var playCount: Int!     // 播放次数
     var length:    Int!       // 视频长度
+    var cover: String!        //  图片网址
     
-    override func setValuesForKeysWithDictionary(keyedValues: [String : AnyObject]) {
+    
+       
+    func setValueMoel(dicModel:NSDictionary){
         
-        
+        title = dicModel.objectForKey("title") as! String
+        cover = dicModel.objectForKey("cover") as! String
+        ptime = dicModel.objectForKey("ptime") as! String
+        mp4_url = dicModel.objectForKey("mp4_url") as! String
+        length = dicModel.objectForKey("length") as! Int
+        playCount = dicModel.objectForKey("playCount") as! Int
     }
+
+    
 }

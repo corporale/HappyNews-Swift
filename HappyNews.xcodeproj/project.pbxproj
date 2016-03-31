@@ -20,6 +20,9 @@
 		3F6C1B5E1CAD21A5007BD218 /* night_audionews_indexheader_recent@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F6C1B5A1CAD21A5007BD218 /* night_audionews_indexheader_recent@2x.png */; settings = {ASSET_TAGS = (); }; };
 		3F6C1B5F1CAD21A5007BD218 /* night_sidebar_cellhighlighted_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F6C1B5B1CAD21A5007BD218 /* night_sidebar_cellhighlighted_bg@2x.png */; settings = {ASSET_TAGS = (); }; };
 		3F6C1B601CAD21A5007BD218 /* night_video_list_cell_count@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F6C1B5C1CAD21A5007BD218 /* night_video_list_cell_count@2x.png */; settings = {ASSET_TAGS = (); }; };
+		3F6C1B621CAD255F007BD218 /* MediaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6C1B611CAD255F007BD218 /* MediaCell.swift */; settings = {ASSET_TAGS = (); }; };
+		3F6C1B661CAD4E91007BD218 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F6C1B651CAD4E91007BD218 /* AVFoundation.framework */; };
+		3F6C1B681CAD4EC7007BD218 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F6C1B671CAD4EC7007BD218 /* AVKit.framework */; };
 		3F6F6A491CA52336004F8624 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6F6A481CA52336004F8624 /* NewsViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		3F6F6A4B1CA52421004F8624 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6F6A4A1CA52421004F8624 /* VideoViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		3F6F6A4D1CA524F9004F8624 /* HappyPlayingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6F6A4C1CA524F9004F8624 /* HappyPlayingViewController.swift */; settings = {ASSET_TAGS = (); }; };
@@ -106,6 +109,9 @@
 		3F6C1B5A1CAD21A5007BD218 /* night_audionews_indexheader_recent@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "night_audionews_indexheader_recent@2x.png"; sourceTree = "<group>"; };
 		3F6C1B5B1CAD21A5007BD218 /* night_sidebar_cellhighlighted_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "night_sidebar_cellhighlighted_bg@2x.png"; sourceTree = "<group>"; };
 		3F6C1B5C1CAD21A5007BD218 /* night_video_list_cell_count@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "night_video_list_cell_count@2x.png"; sourceTree = "<group>"; };
+		3F6C1B611CAD255F007BD218 /* MediaCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaCell.swift; sourceTree = "<group>"; };
+		3F6C1B651CAD4E91007BD218 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		3F6C1B671CAD4EC7007BD218 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		3F6F6A481CA52336004F8624 /* NewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		3F6F6A4A1CA52421004F8624 /* VideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
 		3F6F6A4C1CA524F9004F8624 /* HappyPlayingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HappyPlayingViewController.swift; sourceTree = "<group>"; };
@@ -185,6 +191,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F6C1B681CAD4EC7007BD218 /* AVKit.framework in Frameworks */,
+				3F6C1B661CAD4E91007BD218 /* AVFoundation.framework in Frameworks */,
 				3F6F6A791CA57ACA004F8624 /* libMMDrawerController.a in Frameworks */,
 				7EB3B3BC0A280D46370FC003 /* Pods.framework in Frameworks */,
 			);
@@ -247,6 +255,7 @@
 		3F6F6A421CA5223A004F8624 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3F6C1B611CAD255F007BD218 /* MediaCell.swift */,
 				3F6F6A711CA56DB7004F8624 /* NewsCollectionViewCell.swift */,
 				3F6F6A721CA56DB7004F8624 /* NewsCollectionViewCell.xib */,
 			);
@@ -452,6 +461,8 @@
 		C9C64B9E20A7C88A4B79484E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3F6C1B671CAD4EC7007BD218 /* AVKit.framework */,
+				3F6C1B651CAD4E91007BD218 /* AVFoundation.framework */,
 				3F6C1AFC1CACF6F5007BD218 /* MMDrawerController.framework */,
 				3F6F6A781CA57ACA004F8624 /* libMMDrawerController.a */,
 				08B4794E1AD0CA45230C2857 /* Pods.framework */,
@@ -662,6 +673,7 @@
 				3FE4AA221CAB98F6005F94AB /* SKScNavViewController.swift in Sources */,
 				3FC849E21CA934B70058D528 /* SDWebImageManager.m in Sources */,
 				3F6F6A701CA56D70004F8624 /* MacroDefine.swift in Sources */,
+				3F6C1B621CAD255F007BD218 /* MediaCell.swift in Sources */,
 				3FE4AA271CAB98F6005F94AB /* SKScNavBar.swift in Sources */,
 				3FA525791CA8E5C6009F84E2 /* AFNetworkReachabilityManager.m in Sources */,
 				3FA5257D1CA8E5C7009F84E2 /* AFURLSessionManager.m in Sources */,
