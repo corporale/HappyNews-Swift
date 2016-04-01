@@ -35,6 +35,9 @@ class MenuViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    
+    
+    
     func doneSlider(){
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         appDelegate.drawerController.toggleDrawerSide(MMDrawerSide.Left, animated: true, completion: nil)

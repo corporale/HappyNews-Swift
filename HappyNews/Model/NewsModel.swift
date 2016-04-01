@@ -20,5 +20,6 @@ class NewsModel: NSObject {
     override func setValue(value: AnyObject?, forUndefinedKey key: String) {
         
     }
-
+    
+   
 }
