@@ -24,6 +24,7 @@ class NewsViewController: UIViewController, UICollectionViewDelegate, UICollecti
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
         self.view.backgroundColor = UIColor.whiteColor()
         
 //        self.navigationItem.title = "头条"
@@ -46,6 +47,7 @@ class NewsViewController: UIViewController, UICollectionViewDelegate, UICollecti
         // 防止出现提示
         self.automaticallyAdjustsScrollViewInsets = false;
     }
+    
     
     
     

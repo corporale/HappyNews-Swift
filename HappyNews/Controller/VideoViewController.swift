@@ -14,7 +14,7 @@ import Alamofire
 
 import AVKit
 
-class VideoViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class VideoViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
 
     var tableview:UITableView!
     var mediaArrayer:NSMutableArray! // 存放原始数据的数组
@@ -42,6 +42,8 @@ class VideoViewController: UIViewController, UITableViewDataSource, UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.automaticallyAdjustsScrollViewInsets = false;
+        
         self.view.backgroundColor = UIColor.whiteColor()
         self.tableview = UITableView(frame: self.view.bounds, style: UITableViewStyle.Plain)
         
@@ -70,6 +72,7 @@ class VideoViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     // 支持横竖屏显示
     override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
+        
         return UIInterfaceOrientationMask.All
     }
     
@@ -158,7 +161,7 @@ class VideoViewController: UIViewController, UITableViewDataSource, UITableViewD
         
     
         print("滑出可见区域~(≧▽≦)~啦啦啦")
-        
+        self.mediaPlayer.player?.pause()
         
     }
     
