@@ -28,6 +28,7 @@ class VideoViewController: UIViewController, UITableViewDataSource, UITableViewD
     var Player = AVPlayer()
 //    var playerLayer = AVPlayerLayer()
     
+    var currentRow:Int!
     
     // 加载视频的背景
     var backmovieplayer = UIImageView()
@@ -67,7 +68,93 @@ class VideoViewController: UIViewController, UITableViewDataSource, UITableViewD
         
         self.tableview.delegate = self
         self.tableview.dataSource = self
+        
+        // 监听屏幕改变
+        let device = UIDevice.currentDevice()
+        device.beginGeneratingDeviceOrientationNotifications()
+        
+        let nc = NSNotificationCenter.defaultCenter()
+        nc.addObserver(self, selector: Selector("orientationChanged"), name: UIDeviceOrientationDidChangeNotification, object: device)
     
+    }
+    
+    // 屏幕改变
+    func orientationChanged(){
+        
+        let state = UIDevice.currentDevice().orientation
+        switch (state) {
+        case UIDeviceOrientation.Portrait:
+            print("屏幕变正")
+        up()
+            
+        case UIDeviceOrientation.PortraitUpsideDown:
+            print("屏幕向下")
+            
+        case UIDeviceOrientation.LandscapeLeft:
+            print("屏幕变左")
+        UIApplication.sharedApplication().setStatusBarOrientation(UIInterfaceOrientation.LandscapeRight, animated: true)
+        left()
+            
+        case UIDeviceOrientation.LandscapeRight:
+            print("屏幕变右")
+            
+            
+        default:
+            break
+            
+        }
+        
+    }
+    
+    func up(){
+        if (self.mediaPlayer.player != nil){
+            UIApplication.sharedApplication().setStatusBarHidden(true, withAnimation: UIStatusBarAnimation.None)
+            
+            UIView.animateKeyframesWithDuration(0.3, delay: 0, options: UIViewKeyframeAnimationOptions.AllowUserInteraction, animations: { () -> Void in
+                
+                self.mediaPlayer.view.transform = CGAffineTransformIdentity
+                self.mediaPlayer.view.frame = CGRectMake(10, CGFloat(self.currentRow) * 280 + 20, kScreenWidth - 20, 210)
+                
+                self.tableview.addSubview(self.mediaPlayer.view)
+                
+                }, completion: { (Bool) -> Void in
+                    
+                    
+            })
+            
+            
+        }
+        
+        
+        
+    }
+    
+    func left(){
+        if (self.mediaPlayer.player != nil) {
+            UIApplication.sharedApplication().setStatusBarHidden(true, withAnimation: UIStatusBarAnimation.None)
+            
+            UIView.animateKeyframesWithDuration(0.3, delay: 0, options: UIViewKeyframeAnimationOptions.AllowUserInteraction, animations: { () -> Void in
+                self.mediaPlayer.view.transform = CGAffineTransformMakeRotation(CGFloat(M_PI_2))
+                
+                self.mediaPlayer.view.frame = CGRectMake(0, 0, kscreenWidth, kscreenHeight)
+                
+                let window = UIApplication.sharedApplication().delegate?.window!!
+                
+                window?.addSubview(self.mediaPlayer.view)
+                
+                }, completion: { (Bool) -> Void in
+                    
+            })
+            
+        }
+        
+        
+        
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        
     }
     
     // 支持横竖屏显示
@@ -130,6 +217,8 @@ class VideoViewController: UIViewController, UITableViewDataSource, UITableViewD
         let model = self.mediaArray[indexPath.row] as! MediaModel
         cell.selectionStyle=UITableViewCellSelectionStyle.None
 //        cell.btnimage.kf_setImageWithURL(NSURL(string: model.imageName)!, placeholderImage: Image(named: "1"))
+        self.currentRow = indexPath.row
+        
         cell.btnimage.sd_setImageWithURL(NSURL(string: model.cover)!, placeholderImage: UIImage(named: "night_sidebar_cellhighlighted_bg@2x"))
         
         cell.Labeltitle.text = model.title;
@@ -162,12 +251,18 @@ class VideoViewController: UIViewController, UITableViewDataSource, UITableViewD
     
         print("滑出可见区域~(≧▽≦)~啦啦啦")
         self.mediaPlayer.player?.pause()
-        
+        self.mediaPlayer.view.removeFromSuperview()
+        self.mediaPlayer.player == nil
     }
     
     
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        if self.mediaPlayer.player != nil
+        {
+            self.mediaPlayer.view.removeFromSuperview()
+        
+        }
         
         let model = self.mediaArray[indexPath.row] as! MediaModel
         urlStr = model.mp4_url
@@ -181,7 +276,7 @@ class VideoViewController: UIViewController, UITableViewDataSource, UITableViewD
        
         mediaPlayer.view.autoresizingMask = UIViewAutoresizing.None
         mediaPlayer.view.frame = CGRectMake(10, CGFloat(indexPath.row) * 280 + 20, view.frame.size.width - 20, 210)
-        activiLoading.frame=CGRectMake(mediaPlayer.view.bounds.width / 2 - 18.5, mediaPlayer.view.bounds.height / 2 - 18.5, 37, 37)
+        activiLoading.frame = CGRectMake(mediaPlayer.view.bounds.width / 2 - 18.5, mediaPlayer.view.bounds.height / 2 - 18.5, 37, 37)
         tableview.addSubview(mediaPlayer.view)
         backmovieplayer.frame = CGRectMake(0, 0, view.frame.size.width - 20, 210)
         backmovieplayer.image = UIImage(named: "night_sidebar_cellhighlighted_bg")
@@ -189,17 +284,16 @@ class VideoViewController: UIViewController, UITableViewDataSource, UITableViewD
 //        backmovieplayer.addSubview(activiLoading)
         addNotification()
 //        activiLoading.startAnimating()
-        
-        
+        self.mediaPlayer.player?.play()
     }
     
     func addNotification(){
         
-        self.notificationcenter = NSNotificationCenter.defaultCenter()
-        notificationcenter.addObserver(self, selector: Selector("mediaPlayerbackStateChange:"), name: MPMoviePlayerPlaybackStateDidChangeNotification, object: mediaPlayer)
-        notificationcenter.addObserver(self, selector: Selector("mediaPlayerPlayFinished:"), name: MPMoviePlayerPlaybackDidFinishNotification, object: mediaPlayer)
+//        self.notificationcenter = NSNotificationCenter.defaultCenter()
+//        notificationcenter.addObserver(self, selector: Selector("mediaPlayerbackStateChange:"), name: MPMoviePlayerPlaybackStateDidChangeNotification, object: mediaPlayer)
+//        notificationcenter.addObserver(self, selector: Selector("mediaPlayerPlayFinished:"), name: MPMoviePlayerPlaybackDidFinishNotification, object: mediaPlayer)
         
-        self.mediaPlayer.player?.play()
+        
         
         
     }

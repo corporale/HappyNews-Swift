@@ -14,7 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     var drawerController: MMDrawerController!
-   
+
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
@@ -55,7 +55,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
-    
+   
     
 
     func applicationWillResignActive(application: UIApplication) {
