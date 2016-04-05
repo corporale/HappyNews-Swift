@@ -16,7 +16,7 @@ class MediaCell: UITableViewCell {
     let playcountLabel = UILabel()
     let playcountImage = UIImageView()
     let playtimeLabel = UILabel()
-    let playtimeImage=UIImageView()
+    let playtimeImage = UIImageView()
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)

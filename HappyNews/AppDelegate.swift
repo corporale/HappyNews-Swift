@@ -45,6 +45,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             sideDrawerViewController?.view.alpha = percentVisible
         }
         
+        // 设置navigationBar的背景图片
+        UINavigationBar.appearance().setBackgroundImage(UIImage(named: "card.png"), forBarMetrics: UIBarMetrics.Default)
         
         
         //设置根试图
