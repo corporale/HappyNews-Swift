@@ -46,6 +46,10 @@ class NewsViewController: UIViewController, UICollectionViewDelegate, UICollecti
         
         // 防止出现提示
         self.automaticallyAdjustsScrollViewInsets = false;
+        
+        
+            
+        
     }
     
     
@@ -62,7 +66,9 @@ class NewsViewController: UIViewController, UICollectionViewDelegate, UICollecti
         flowLayout.sectionInset = UIEdgeInsetsMake(0, 0, 0, 0)
         flowLayout.scrollDirection = UICollectionViewScrollDirection.Vertical
         
-        self.collectionView = UICollectionView(frame: CGRectMake(0, 0, kscreenWidth, kscreenHeight), collectionViewLayout: flowLayout)
+        
+        
+        self.collectionView = UICollectionView(frame: self.view.bounds, collectionViewLayout: flowLayout)
         self.collectionView.backgroundColor = UIColor.whiteColor()
         
         self.collectionView.pagingEnabled = true

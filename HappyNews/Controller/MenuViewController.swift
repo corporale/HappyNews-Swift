@@ -24,6 +24,7 @@ class MenuViewController: UIViewController {
         
         self.navigationController?.navigationBar.translucent = true
         
+        
         newsVC.title = "头条"
         videoVC.title = "视频"
         happyPlayingVC.title = "玩乐"
