@@ -28,7 +28,7 @@ class VideoViewController: UIViewController, UITableViewDataSource, UITableViewD
     var Player = AVPlayer()
 //    var playerLayer = AVPlayerLayer()
     
-    var currentRow:Int!
+    var currentRow:Int! // 记录点击的行数
     
     // 加载视频的背景
     var backmovieplayer = UIImageView()
@@ -46,7 +46,7 @@ class VideoViewController: UIViewController, UITableViewDataSource, UITableViewD
         self.automaticallyAdjustsScrollViewInsets = false;
         
         self.view.backgroundColor = UIColor.whiteColor()
-        self.tableview = UITableView(frame: self.view.bounds, style: UITableViewStyle.Plain)
+        self.tableview = UITableView(frame: CGRectMake(0, 0, kScreenWidth, kScreenHeight - 64), style: UITableViewStyle.Plain)
         
         self.tableview.backgroundColor = UIColor.whiteColor()
         self.view.addSubview(self.tableview)
@@ -97,6 +97,8 @@ class VideoViewController: UIViewController, UITableViewDataSource, UITableViewD
             
         case UIDeviceOrientation.LandscapeRight:
             print("屏幕变右")
+        UIApplication.sharedApplication().setStatusBarOrientation(UIInterfaceOrientation.LandscapeRight, animated: true)
+        right()
             
             
         default:
@@ -128,6 +130,30 @@ class VideoViewController: UIViewController, UITableViewDataSource, UITableViewD
         
         
     }
+    
+    func right(){
+        
+        if (self.mediaPlayer.player != nil) {
+            UIApplication.sharedApplication().setStatusBarHidden(true, withAnimation: UIStatusBarAnimation.None)
+            
+            UIView.animateKeyframesWithDuration(0.3, delay: 0, options: UIViewKeyframeAnimationOptions.AllowUserInteraction, animations: { () -> Void in
+                self.mediaPlayer.view.transform = CGAffineTransformMakeRotation(CGFloat(-M_PI_2))
+                
+                self.mediaPlayer.view.frame = CGRectMake(0, 0, kscreenWidth, kscreenHeight)
+                
+                let window = UIApplication.sharedApplication().delegate?.window!!
+                
+                window?.addSubview(self.mediaPlayer.view)
+                
+                }, completion: { (Bool) -> Void in
+                    
+            })
+            
+        }
+        
+        
+    }
+    
     
     func left(){
         if (self.mediaPlayer.player != nil) {
@@ -217,7 +243,7 @@ class VideoViewController: UIViewController, UITableViewDataSource, UITableViewD
         let model = self.mediaArray[indexPath.row] as! MediaModel
         cell.selectionStyle=UITableViewCellSelectionStyle.None
 //        cell.btnimage.kf_setImageWithURL(NSURL(string: model.imageName)!, placeholderImage: Image(named: "1"))
-        self.currentRow = indexPath.row
+       
         
         cell.btnimage.sd_setImageWithURL(NSURL(string: model.cover)!, placeholderImage: UIImage(named: "night_sidebar_cellhighlighted_bg@2x"))
         
@@ -272,8 +298,9 @@ class VideoViewController: UIViewController, UITableViewDataSource, UITableViewD
         
         Player = AVPlayer(URL: url)
         mediaPlayer.player = Player
-
-       
+        
+        self.currentRow = indexPath.row
+        
         mediaPlayer.view.autoresizingMask = UIViewAutoresizing.None
         mediaPlayer.view.frame = CGRectMake(10, CGFloat(indexPath.row) * 280 + 20, view.frame.size.width - 20, 210)
         activiLoading.frame = CGRectMake(mediaPlayer.view.bounds.width / 2 - 18.5, mediaPlayer.view.bounds.height / 2 - 18.5, 37, 37)

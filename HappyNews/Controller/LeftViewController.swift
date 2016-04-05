@@ -12,12 +12,14 @@ class LeftViewController: UIViewController, UITableViewDelegate,
                           UITableViewDataSource {
     
     private var tableView: UITableView!
+    var array: Array<String>!
     
     override func viewDidLoad() {
         super.viewDidLoad()
   
+        self.array = ["我的主页", "夜间模式", "更换主题", "清理缓存"];
         setTableView()
-        // Do any additional setup after loading the view.
+        
     }
 
     func setTableView(){
@@ -31,7 +33,7 @@ class LeftViewController: UIViewController, UITableViewDelegate,
         // 设置headerView
         let headImageViewHeight: CGFloat = 160
         let headImageView = UIImageView(frame: CGRectMake(0, 0, Common.screenWidth * 0.7, headImageViewHeight))
-        headImageView.image = UIImage(named: "quesheng")
+        headImageView.image = UIImage(named: "background")
         
         tableView.tableHeaderView = headImageView
         tableView.tableFooterView = UIView()
@@ -48,7 +50,7 @@ class LeftViewController: UIViewController, UITableViewDelegate,
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return self.array.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -62,7 +64,7 @@ class LeftViewController: UIViewController, UITableViewDelegate,
             cell?.selectionStyle = .None
             
         }
-        cell?.textLabel?.text = "我的主页"
+        cell?.textLabel?.text = self.array[indexPath.row]
         return cell!
     }
     
