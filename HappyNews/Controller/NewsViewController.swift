@@ -133,7 +133,7 @@ class NewsViewController: UIViewController, UICollectionViewDelegate, UICollecti
         let dic2:AnyObject! = dic1["articles"]
         self.newsArr = dic2! as! Array<Dictionary<String, AnyObject>>
         
-//        print(self.newsArr)
+        print(self.newsArr)
         
         let count = self.newsArr.count
         var page = Array<AnyObject>()

@@ -12,7 +12,7 @@ class NewsModel: NSObject {
     
     var title:String!
     var auther_name:String!
-    var data:String!
+    var date:String!
     var weburl:String!
     var full_url:String!
     var thumbnail_mpic:String!
