@@ -196,7 +196,7 @@ class VideoViewController: UIViewController, UITableViewDataSource, UITableViewD
                 
 //                print("____\(response)")
                 self.mediaArrayer = response.result.value?.objectForKey("V9LG4B3A0") as! NSMutableArray
-                print("____\(self.mediaArrayer)")
+//                print("____\(self.mediaArrayer)")
             
                 for i in 0..<self.mediaArrayer.count{
                     
@@ -208,7 +208,7 @@ class VideoViewController: UIViewController, UITableViewDataSource, UITableViewD
                     
                 }
                self.tableview.reloadData()
-                print(self.mediaArray.count)
+//                print(self.mediaArray.count)
             }
             
             

@@ -59,6 +59,7 @@
 		3FC849E71CA934B70058D528 /* UIImageView+HighlightedWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC849D71CA934B70058D528 /* UIImageView+HighlightedWebCache.m */; settings = {ASSET_TAGS = (); }; };
 		3FC849E81CA934B70058D528 /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC849D91CA934B70058D528 /* UIImageView+WebCache.m */; settings = {ASSET_TAGS = (); }; };
 		3FC849E91CA934B70058D528 /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC849DB1CA934B70058D528 /* UIView+WebCacheOperation.m */; settings = {ASSET_TAGS = (); }; };
+		3FDA9BFC1CB65A2700635ABE /* calculateTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDA9BFB1CB65A2700635ABE /* calculateTime.swift */; settings = {ASSET_TAGS = (); }; };
 		3FE4AA151CAB7DC8005F94AB /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE4AA141CAB7DC8005F94AB /* MenuViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		3FE4AA221CAB98F6005F94AB /* SKScNavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE4AA1A1CAB98F6005F94AB /* SKScNavViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		3FE4AA231CAB98F6005F94AB /* arrow@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FE4AA1C1CAB98F6005F94AB /* arrow@3x.png */; settings = {ASSET_TAGS = (); }; };
@@ -67,7 +68,6 @@
 		3FE4AA261CAB98F6005F94AB /* SKLaunchMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE4AA201CAB98F6005F94AB /* SKLaunchMenuItem.swift */; settings = {ASSET_TAGS = (); }; };
 		3FE4AA271CAB98F6005F94AB /* SKScNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE4AA211CAB98F6005F94AB /* SKScNavBar.swift */; settings = {ASSET_TAGS = (); }; };
 		3FE4AA291CAB9CCD005F94AB /* PictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE4AA281CAB9CCD005F94AB /* PictureViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		3FE9629B1CAE5E9300087A4C /* MyNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE9629A1CAE5E9300087A4C /* MyNavigationController.swift */; settings = {ASSET_TAGS = (); }; };
 		7EB3B3BC0A280D46370FC003 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08B4794E1AD0CA45230C2857 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -179,6 +179,7 @@
 		3FC849D91CA934B70058D528 /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
 		3FC849DA1CA934B70058D528 /* UIView+WebCacheOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WebCacheOperation.h"; sourceTree = "<group>"; };
 		3FC849DB1CA934B70058D528 /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
+		3FDA9BFB1CB65A2700635ABE /* calculateTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = calculateTime.swift; sourceTree = "<group>"; };
 		3FE4AA141CAB7DC8005F94AB /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		3FE4AA1A1CAB98F6005F94AB /* SKScNavViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKScNavViewController.swift; sourceTree = "<group>"; };
 		3FE4AA1C1CAB98F6005F94AB /* arrow@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow@3x.png"; sourceTree = "<group>"; };
@@ -187,7 +188,6 @@
 		3FE4AA201CAB98F6005F94AB /* SKLaunchMenuItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKLaunchMenuItem.swift; sourceTree = "<group>"; };
 		3FE4AA211CAB98F6005F94AB /* SKScNavBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKScNavBar.swift; sourceTree = "<group>"; };
 		3FE4AA281CAB9CCD005F94AB /* PictureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PictureViewController.swift; sourceTree = "<group>"; };
-		3FE9629A1CAE5E9300087A4C /* MyNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyNavigationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -252,6 +252,7 @@
 			children = (
 				3FB901441CA917C400485679 /* NewsModel.swift */,
 				3F6C1AFA1CACD13A007BD218 /* MediaModel.swift */,
+				3FDA9BFB1CB65A2700635ABE /* calculateTime.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -276,7 +277,6 @@
 				3F6F6A4C1CA524F9004F8624 /* HappyPlayingViewController.swift */,
 				3F6F6A611CA53EE2004F8624 /* LeftViewController.swift */,
 				3F846ECB1CAA1C47006A647E /* NewsDetailViewController.swift */,
-				3FE9629A1CAE5E9300087A4C /* MyNavigationController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -677,7 +677,6 @@
 				3FC849E61CA934B70058D528 /* UIImage+MultiFormat.m in Sources */,
 				3F6F6A4D1CA524F9004F8624 /* HappyPlayingViewController.swift in Sources */,
 				3F6C1B091CACFF25007BD218 /* MMDrawerController.m in Sources */,
-				3FE9629B1CAE5E9300087A4C /* MyNavigationController.swift in Sources */,
 				3FE4AA221CAB98F6005F94AB /* SKScNavViewController.swift in Sources */,
 				3FC849E21CA934B70058D528 /* SDWebImageManager.m in Sources */,
 				3F6F6A701CA56D70004F8624 /* MacroDefine.swift in Sources */,
@@ -705,6 +704,7 @@
 				3FC849E71CA934B70058D528 /* UIImageView+HighlightedWebCache.m in Sources */,
 				3F6C1B0B1CACFF25007BD218 /* UIViewController+MMDrawerController.m in Sources */,
 				3FE4AA241CAB98F6005F94AB /* SKMacros.swift in Sources */,
+				3FDA9BFC1CB65A2700635ABE /* calculateTime.swift in Sources */,
 				3FC849DF1CA934B70058D528 /* SDWebImageDecoder.m in Sources */,
 				3FC849DD1CA934B70058D528 /* SDImageCache.m in Sources */,
 				3F6C1B511CAD1EC6007BD218 /* AppDelegate.swift in Sources */,

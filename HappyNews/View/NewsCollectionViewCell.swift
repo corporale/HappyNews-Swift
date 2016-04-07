@@ -27,10 +27,17 @@ class NewsCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var contentView6: UIView!
     
     
+    @IBOutlet weak var detailLB1: UILabel!
+    @IBOutlet weak var detailLB2: UILabel!
+    @IBOutlet weak var detailLB3: UILabel!
+    @IBOutlet weak var detailLB4: UILabel!
+    @IBOutlet weak var detailLB5: UILabel!
+
     @IBOutlet weak var imageview: UIImageView!
     
     var titleArray:Array<UILabel>!
     var contentViewArray:NSArray!
+    var detailLabelArray:Array<UILabel>!
     var newsArr:Array<AnyObject>!
     var toucher:UITouch!
     
@@ -65,9 +72,12 @@ class NewsCollectionViewCell: UICollectionViewCell {
             
             self.contentViewArray = [self.contentView1, self.contentView2, self.contentView3, self.contentView4, self.contentView5, self.contentView6]
             self.titleArray = [self.titleLB1, self.titleLB2, self.titleLB3, self.titleLB4, self.titleLB5, self.titleLB6]
+            self.detailLabelArray = [self.detailLB1, self.detailLB2, self.detailLB3, self.detailLB4, self.detailLB5]
+            
             
             let count = newValue.count
             var titleLabel = UILabel()
+            var detailLabel = UILabel()
             var view = UIView()
             var news = NewsModel()
             
@@ -76,10 +86,28 @@ class NewsCollectionViewCell: UICollectionViewCell {
                 view = contentViewArray[i] as! UIView
                 view.layer.borderWidth = 0.25
                 view.layer.borderColor = UIColor.lightGrayColor().CGColor
+                
+                if news.date != nil{
+                let time = news.date! as String
+                // 在本类中调用别的类的方法
+                let b = calculateTime()
+                b.calculate(time)
+                }
+                
+                
+                
                 if (news.title != nil) {
                     titleLabel = self.titleArray[i]
                     titleLabel.text = news.title
                 }
+                
+                if (news.auther_name != nil && i < count && i != 0){
+                    detailLabel = self.detailLabelArray[i - 1]
+                    detailLabel.text = news.auther_name
+                    
+                    
+                }
+                
                 if i == 0 {
                     
                     if (news.thumbnail_mpic != nil) {
