@@ -11,7 +11,7 @@ import UIKit
 
 class calculateTime: NSObject {
 
-    func calculate(origindata: String){
+    func calculate(origindata: String) -> String{
         
         // 计算当前时间
 //        let currentDate: NSDate = NSDate(timeIntervalSinceNow: 8*60*60)
@@ -36,16 +36,17 @@ class calculateTime: NSObject {
 //        let timeInterval = lround(timeIntervaler)
         
         if (timeInterval <= 60){
-          print("刚刚")
+          return "刚刚"
         }
         else if(timeInterval <= 3600){
             
-            print("\(timeInterval / 60)分钟前")
+            return "\(timeInterval / 60)分钟前"
            
         }
-        else if(timeInterval <= 3600 * 24){
-            
-            print("\(timeInterval / 3600)小时前")
+//        else (timeInterval <= 3600 * 24){
+        else{
+        
+            return "\(timeInterval / 3600)小时前"
             
         }
         

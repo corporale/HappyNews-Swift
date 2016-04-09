@@ -87,13 +87,6 @@ class NewsCollectionViewCell: UICollectionViewCell {
                 view.layer.borderWidth = 0.25
                 view.layer.borderColor = UIColor.lightGrayColor().CGColor
                 
-                if news.date != nil{
-                let time = news.date! as String
-                // 在本类中调用别的类的方法
-                let b = calculateTime()
-                b.calculate(time)
-                }
-                
                 
                 
                 if (news.title != nil) {
@@ -102,9 +95,18 @@ class NewsCollectionViewCell: UICollectionViewCell {
                 }
                 
                 if (news.auther_name != nil && i < count && i != 0){
-                    detailLabel = self.detailLabelArray[i - 1]
-                    detailLabel.text = news.auther_name
                     
+                    if news.date != nil{
+                        let time = news.date! as String
+                        // 在本类中调用别的类的方法
+                        let b = calculateTime()
+                        let timeString = b.calculate(time)
+                    
+                    
+                    
+                    detailLabel = self.detailLabelArray[i - 1]
+                    detailLabel.text = "\(news.auther_name) \(timeString)"
+                    }
                     
                 }
                 
