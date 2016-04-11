@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F1250CC1CBBC8D600719087 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1250CB1CBBC8D600719087 /* MBProgressHUD.m */; settings = {ASSET_TAGS = (); }; };
 		3F46B6871CB3DD63004AF06B /* card.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F46B6861CB3DD63004AF06B /* card.png */; settings = {ASSET_TAGS = (); }; };
 		3F6C1AFB1CACD13A007BD218 /* MediaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6C1AFA1CACD13A007BD218 /* MediaModel.swift */; settings = {ASSET_TAGS = (); }; };
 		3F6C1B081CACFF25007BD218 /* MMDrawerBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F6C1B001CACFF25007BD218 /* MMDrawerBarButtonItem.m */; settings = {ASSET_TAGS = (); }; };
@@ -92,6 +93,8 @@
 		08B4794E1AD0CA45230C2857 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		09D333612FF75548EE0903FA /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		2813228A19118FA200DD2A93 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		3F1250CA1CBBC8D600719087 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		3F1250CB1CBBC8D600719087 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		3F46B6861CB3DD63004AF06B /* card.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = card.png; sourceTree = "<group>"; };
 		3F6C1AFA1CACD13A007BD218 /* MediaModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaModel.swift; sourceTree = "<group>"; };
 		3F6C1AFC1CACF6F5007BD218 /* MMDrawerController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MMDrawerController.framework; path = "Pods/../build/Debug-iphoneos/MMDrawerController.framework"; sourceTree = "<group>"; };
@@ -310,6 +313,8 @@
 				3F6F6A6F1CA56D70004F8624 /* MacroDefine.swift */,
 				3F846ECD1CAA31F1006A647E /* UIView+Init.h */,
 				3F846ECE1CAA31F1006A647E /* UIView+Init.m */,
+				3F1250CA1CBBC8D600719087 /* MBProgressHUD.h */,
+				3F1250CB1CBBC8D600719087 /* MBProgressHUD.m */,
 				3F6C1AFE1CACFF25007BD218 /* MMDrawerController */,
 				3FE4AA181CAB98F6005F94AB /* SKScNavBarController */,
 				3FC849BE1CA934B70058D528 /* SDWebImage */,
@@ -699,6 +704,7 @@
 				3F6F6A491CA52336004F8624 /* NewsViewController.swift in Sources */,
 				3F846ECF1CAA31F1006A647E /* UIView+Init.m in Sources */,
 				3FC849E31CA934B70058D528 /* SDWebImagePrefetcher.m in Sources */,
+				3F1250CC1CBBC8D600719087 /* MBProgressHUD.m in Sources */,
 				3FC849E81CA934B70058D528 /* UIImageView+WebCache.m in Sources */,
 				3FE4AA261CAB98F6005F94AB /* SKLaunchMenuItem.swift in Sources */,
 				3FC849E71CA934B70058D528 /* UIImageView+HighlightedWebCache.m in Sources */,
