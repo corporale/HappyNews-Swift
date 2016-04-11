@@ -33,7 +33,7 @@ class MenuViewController: UIViewController {
         let skScNavC = SKScNavViewController(subViewControllers: [newsVC, videoVC, happyPlayingVC, pictureVC])
         skScNavC.addParentController(self)
         
-        // Do any additional setup after loading the view.
+        
     }
     
     

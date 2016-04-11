@@ -15,6 +15,7 @@ class NewsViewController: UIViewController, UICollectionViewDelegate, UICollecti
     var collectionView:UICollectionView!
     var httpManager:AFHTTPSessionManager!
     var newsArr:Array<Dictionary<String, AnyObject>>!
+    var activityIndicator:UIActivityIndicatorView!
 //    var newsArr:Array<AnyObject>!
     
     
@@ -39,8 +40,9 @@ class NewsViewController: UIViewController, UICollectionViewDelegate, UICollecti
         loadData()
         
         
-        setupCollectionView()
         
+        
+        setupCollectionView()
         
         
         
@@ -52,8 +54,18 @@ class NewsViewController: UIViewController, UICollectionViewDelegate, UICollecti
         
     }
     
-    
-    
+    /*
+    override func viewWillAppear(animated: Bool) {
+        self.activityIndicator = UIActivityIndicatorView(frame: CGRectMake(0, 0, 200, 200))
+        activityIndicator.center = CGPointMake(kscreenWidth / 2, kScreenHeight)
+        activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.Gray
+//        self.collectionView.addSubview(activityIndicator)
+        self.view.addSubview(activityIndicator)
+        
+        activityIndicator.startAnimating()
+
+    }
+    */
     
     
     func setupCollectionView(){
